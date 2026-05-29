@@ -16,7 +16,7 @@ SECONDS=0
 
 logs=$base/logs
 
-model_name=?
+model_name=enit_bpe_4k
 
 mkdir -p $logs
 
