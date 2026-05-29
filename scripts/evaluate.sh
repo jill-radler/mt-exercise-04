@@ -21,7 +21,7 @@ device=0
 
 SECONDS=0
 
-model_name=enit_word_2k
+model_name=enit_bpe_4k
 
 echo "###############################################################################"
 echo "model_name $model_name"

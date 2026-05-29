@@ -79,3 +79,48 @@ Once setup is complete, use the instructions in the exercise PDF to run training
 
   Always activate your virtual environment before running any training or evaluation steps.
 
+
+## Language pair
+I used eng - it for all the models.
+
+## preprocessing
+
+For the word model i used moses. For the BPE I learned joint bPE codes on the English and Italian training data and built a shared BPE vocabulary
+
+
+## Added files
+
+The following JoeyNMT configuration files were added:
+
+configs/enit_word_2k.yaml
+configs/enit_bpe_2k.yaml
+configs/enit_bpe_4k.yaml
+
+For the BPE experiments I learned joint BPE models and vocabularies for English and Italian.
+
+Added files:
+
+bpe/codes2000.bpe
+bpe/codes4000.bpe
+shared_models/enit-bpe2000-vocab.txt
+shared_models/enit-bpe4000-vocab.txt
+
+## Modifications
+
+scripts/train.sh
+scripts/evaluate.sh
+
+The scripts were adapted to support the different experiment configurations and evaluation runs.
+
+## Reproducing the experiments
+
+Train the model with:
+bash scripts/train.sh
+
+Evaluate the model with:
+bash scripts/evaluate.sh
+
+Beam size Experiments:
+The best model  enit_bpe_4k was used. The beam size parameter in the configuration file was varied and evaluated 10 times to measure the BLEU score and the time it ran.
+
+Please note: I created the graphs on Excel because I already created a table with the different numbers. Therefore, I do not have any code I can submit.
